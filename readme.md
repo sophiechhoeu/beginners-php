@@ -1,6 +1,6 @@
 # Beginners php
 
-- using mamp version
+- using mamp version 4.4.1
 - root directory/htdocs/
 
 - class = template for objects
@@ -103,4 +103,7 @@ class Admin extends User{
 - extends User is basically utilises all the code within the user class, all we need to do now is differentiate the difference between classes ie permission levels
 
 - need to set the constructure with the what identifiers we're after, inherent from the parent construct
- 
+
+- getType doesn't exist in the admin class it looks up at the user class because of admin extends user
+
+if you make a getType method in admin class it will get that instead

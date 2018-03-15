@@ -24,9 +24,10 @@ class Admin extends User{
   public function __construct($name, $email, $type, $permissionLevel){
     parent::__construct($name, $email, $type);
     $this->permissionLevel = $permissionLevel;
-  };
-
+  }
 }
+
+
 
 // User
 // - Name
