@@ -107,3 +107,43 @@ class Admin extends User{
 - getType doesn't exist in the admin class it looks up at the user class because of admin extends user
 
 if you make a getType method in admin class it will get that instead
+
+
+```
+<?php
+
+
+class User {
+
+  public $name;
+  public $email;
+
+
+  public function __construct($name, $email){
+    $this->name = $name;
+    $this->email = $email;
+
+  }
+
+  public function getType(){
+    return $this->type;
+  }
+}
+
+class Admin extends User{
+  public $permissionLevel;
+  public $type = 'Admin';
+
+  public function __construct($name, $email, $permissionLevel){
+    parent::__construct($name, $email);
+    $this->permissionLevel = $permissionLevel;
+  }
+
+  public function getType(){
+    return 'Hello from ' . parent :: getType();
+  }
+}
+
+```
+
+this second getType method returns hello and then inherits from the parent get type to read the type of user. 

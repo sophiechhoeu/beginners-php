@@ -5,12 +5,12 @@ class User {
 
   public $name;
   public $email;
-  public $type;
 
-  public function __construct($name, $email, $type){
+
+  public function __construct($name, $email){
     $this->name = $name;
     $this->email = $email;
-    $this->type = $type;
+
   }
 
   public function getType(){
@@ -20,10 +20,15 @@ class User {
 
 class Admin extends User{
   public $permissionLevel;
+  public $type = 'Admin';
 
-  public function __construct($name, $email, $type, $permissionLevel){
-    parent::__construct($name, $email, $type);
+  public function __construct($name, $email, $permissionLevel){
+    parent::__construct($name, $email);
     $this->permissionLevel = $permissionLevel;
+  }
+
+  public function getType(){
+    return 'Hello from ' . parent :: getType();
   }
 }
 
