@@ -146,4 +146,7 @@ class Admin extends User{
 
 ```
 
-this second getType method returns hello and then inherits from the parent get type to read the type of user. 
+this second getType method returns hello and then inherits from the parent get type to read the type of user.
+
+
+Objects that have anything in common you would want to extend the class 

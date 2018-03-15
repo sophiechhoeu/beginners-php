@@ -28,8 +28,19 @@ class Admin extends User{
   }
 
   public function getType(){
-    return 'Hello from ' . parent :: getType();
+    return 'This is an Admin with a type of ..' . parent :: getType();
   }
+}
+
+class Member extends User{
+  public $dateAdded;
+  public $type = 'Member';
+
+  public function __construct($name, $email, $dateAdded){
+    parent::__construct($name, $email);
+    $this->$dateAdded = $dateAdded;
+  }
+
 }
 
 
