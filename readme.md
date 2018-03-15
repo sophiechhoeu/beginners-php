@@ -1,5 +1,8 @@
 # Beginners php
 
+- using mamp version
+- root directory/htdocs/
+
 - class = template for objects
 - new instantiates all the code inside the class and makes an object and then assigns it to a variable
 - function insides of a class, referred to as a method
@@ -65,3 +68,39 @@ try to return and echo out the password because we're passing in hint that doesn
 where the class is isn't necessarily where you instantiate it- you create a new file
 
 include the new file, the class is in a different file so it be reusable
+
+
+
+### inheritance
+users- administrators / members
+
+roles
+
+User
+- Name
+- Emails
+
+
+administrators
+- Permission Level
+
+members
+- Date Added
+
+
+```
+class Admin extends User{
+  public $permissionLevel;
+
+  public function __construct($name, $email, $type, $permissionLevel){
+    parent::__construct($name, $email, $type);
+    $this->permissionLevel = $permissionLevel;
+  };
+
+}
+```
+
+- extends User is basically utilises all the code within the user class, all we need to do now is differentiate the difference between classes ie permission levels
+
+- need to set the constructure with the what identifiers we're after, inherent from the parent construct
+ 

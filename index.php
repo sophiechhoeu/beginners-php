@@ -3,6 +3,6 @@
 include('user.php');
 
 
-$soph = new User(29);
+$user1 = new User('Sophie','test@mail.com','Member');
 
-echo $soph->getPassword('getit');
+echo $user1->getType();
